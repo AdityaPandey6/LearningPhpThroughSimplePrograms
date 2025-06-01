@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Regestration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Book Management System</h1>
+    <fieldset>
+        <!-- <legend>
+            <h1> Information Area </h1>
+        </legend> -->
+        <p class="success">Form submitted successfully</p>
+        <form action="input.php" method="POST">
+            <label for="name">Full name: </label>
+            <input type="text" id="name" value="" name="name"><br>
+            <label for="course">Course: </label>
+            <input type="text" id="course" name="course"><br>
+            <label for="subject">Subject: </label>
+            <input type="text" id="subject" name="subject"><br>
+            <label for="studentid">Student Id: </label>
+            <input type="text" id="studentid" name="studentid"><br>
+            <label for="bookname">Book Name: </label>
+            <input type="text" id="bookname" name="bookname"><br>
+            <div class="btn">
+                <button id="submit" type="submit">Submit</button>
+                <button id="reset" type="reset">Reset</button>
+            </div>
+        </form>
+    </fieldset>
+    <script>
+        let submitBtn = document.getElementById('submit');
+        let resetBtn = document.getElementById('reset');
+        let success = document.getElementsByClassName('success')[0];
+        submitBtn.addEventListener('click', () => {
+            success.style.visibility = "visible";
+        })
+
+        resetBtn.addEventListener('click', () => {
+            console.log("Form Reseted");
+        })
+    </script>
+</body>
+
+</html>
